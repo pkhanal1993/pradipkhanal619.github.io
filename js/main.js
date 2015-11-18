@@ -214,7 +214,12 @@
 	            $('#message-warning').fadeIn();
             }
 
-	      }
+	      },
+        error: function(){
+          $('#image-loader').fadeOut();
+               $('#message-warning').html(msg);
+              $('#message-warning').fadeIn();
+        } 
 
       });
       return false;
