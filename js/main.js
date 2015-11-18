@@ -189,30 +189,37 @@
                  '&contactEmail=' + contactEmail + '&contactSubject=' + contactSubject + 
                  '&contactMessage=' + contactMessage;
 
+
       $.ajax({
+    url: "//formspree.io/you@email.com", 
+    method: "POST",
+    data: {message: "hello!"},
+    dataType: "json"
+});
+      // $.ajax({
 
-	      type: "POST",
-	      url: "//formspree.io/pkhanal1993@gmail.com",
-	      data: data,
-	      success: function(msg) {
+	     //  type: "POST",
+	     //  url: "//formspree.io/pkhanal1993@gmail.com",
+	     //  data: data,
+	     //  success: function(msg) {
 
-            // Message was sent
-            if (msg == 'OK') {
-               $('//formspree.io/thanks').fadeOut();
-               $('#message-warning').hide();
-               $('#contactForm').fadeOut();
-               $('#message-success').fadeIn();   
-            }
-            // There was an error
-            else {
-               $('#image-loader').fadeOut();
-               $('#message-warning').html(msg);
-	            $('#message-warning').fadeIn();
-            }
+      //       // Message was sent
+      //       if (msg == 'OK') {
+      //          $('#image-loader').fadeOut();
+      //          $('#message-warning').hide();
+      //          $('#contactForm').fadeOut();
+      //          $('#message-success').fadeIn();   
+      //       }
+      //       // There was an error
+      //       else {
+      //          $('#image-loader').fadeOut();
+      //          $('#message-warning').html(msg);
+	     //        $('#message-warning').fadeIn();
+      //       }
 
-	      }
+	     //  }
 
-      });
+      // });
       return false;
    });
 
