@@ -198,7 +198,7 @@
 
             // Message was sent
             if (msg == 'OK') {
-               $('#image-loader').fadeOut();
+               $('//formspree.io/thanks').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
                $('#message-success').fadeIn();   
